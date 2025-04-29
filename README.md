@@ -16,6 +16,18 @@ This project compares object detection results between YOLOv2 and YOLOv3 models.
 - pyautogui
 - keyboard
 
+You can download the pre-trained weights and configuration files for YOLOv2 and YOLOv3 from the following links:
+
+- **YOLOv3**:
+   - [Weights](https://data.pjreddie.com/files/yolov3.weights)
+   - [Configuration](https://github.com/pjreddie/darknet/blob/master/cfg/yolov3.cfg)
+
+- **YOLOv2**:
+   - [Weights](https://data.pjreddie.com/files/yolov2.weights)
+   - [Configuration](https://github.com/pjreddie/darknet/blob/master/cfg/yolov2.cfg)
+
+Learn more [Here](https://pjreddie.com/darknet/yolo/#performance-on-the-coco-dataset)
+
 ## Installation
 
 1. Install the required Python packages:
