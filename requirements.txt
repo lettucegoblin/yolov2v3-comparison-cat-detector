@@ -1,0 +1,6 @@
+opencv-python-headless
+opencv-contrib-python-headless
+PyQt5
+mss
+pyautogui
+keyboard
