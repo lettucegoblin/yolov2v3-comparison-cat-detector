@@ -7,7 +7,7 @@ import pyautogui
 import keyboard  # for hotkey
 import time
 
-KERNELSIZE = 608  # Size of the YOLO input image
+KERNELSIZE = 608 *2  # Size of the YOLO input image
 
 # Load YOLOv2 and YOLOv3
 def load_yolo(cfg, weights):
@@ -158,8 +158,10 @@ def match_boxes(boxes1, boxes2, iou_threshold=0.5):
         for box2 in boxes2:
             if iou(box1, box2) > iou_threshold:
                 matched.append((box1, box2))
-                unmatched1.remove(box1)
-                unmatched2.remove(box2)
+                if box1 in unmatched1:
+                    unmatched1.remove(box1)
+                if box2 in unmatched2:  # Ensure box2 is in unmatched2 before removing
+                    unmatched2.remove(box2)
                 break
 
     return matched, unmatched1, unmatched2
